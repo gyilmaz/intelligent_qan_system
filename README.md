@@ -20,22 +20,35 @@ The project is structured as a pipeline using Hydra for configuration management
 
 ## Project Structure
 intelligent_qan_system/
+:start_line:23
+-------
+├── .env                        # Environment variables
+├── .gitignore                  # Specifies intentionally untracked files that Git should ignore
 ├── conf/
 │   ├── config.yaml             # Main configuration file
 │   ├── data/
 │   │   └── default.yaml        # Data processing configuration
 │   ├── deployment/
-│   │   └── default.yaml    # Deployment configuration (e.g., AWS settings)
+│   │   └── default.yaml        # Deployment configuration (e.g., AWS settings)
 │   ├── model/
 │   │   └── default.yaml        # Model configuration (embedding, generator LLM, vector DB)
 │   └── api/
+:start_line:39
+-------
 │       └── default.yaml        # API configuration (host, port)
 ├── data/
 │   ├── raw/                    # Directory for raw input data (e.g., your PDF)
-│   └── processed/              # Directory for processed data (text chunks)
+│   ├── processed/              # Directory for processed data (text chunks)
 │   └── vector_db/              # Directory for the ChromaDB vector database
+│       ├── chroma.sqlite3       # ChromaDB database file
+│       └── [UUID]/            # ChromaDB data files
+├── outputs/                    # Directory for experiment outputs and logs
 ├── src/
-│   ├── init.py             # Makes src a Python package
+│   ├── __init__.py             # Makes src a Python package
+│   ├── data_processing.py      # Logic for reading and chunking documents
+│   ├── vector_db.py            # Logic for creating and interacting with the vector database
+│   ├── rag_system.py           # Core RAG query logic (retrieval + generation)
+│   └── api.py                  # FastAPI application and endpoint definition
 │   ├── data_processing.py      # Logic for reading and chunking documents
 │   ├── vector_db.py            # Logic for creating and interacting with the vector database
 │   ├── rag_system.py           # Core RAG query logic (retrieval + generation)
