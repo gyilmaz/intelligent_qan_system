@@ -1,0 +1,13 @@
+defaults:
+  - _self_
+  - data: default.yaml       # This line tells Hydra to load the data config named 'default' (from conf/data/default.yaml)
+  - model: default.yaml      # This line tells Hydra to load the model config named 'default' (from conf/model/default.yaml)
+  - deployment: default.yaml # This line tells Hydra to load the deployment config named 'default' (from conf/deployment/default.yaml)
+  - api: default.yaml       # This line tells Hydra to load the API config named 'default' (from conf/api/default.yaml)
+# Global settings
+project_name: "IntelligentDocument_QAN_System"
+
+# --- Pipeline Step ---
+# Use this to specify which part of the pipeline to run
+# Options: process_data, build_index, run_api, run_ui
+pipeline: ???

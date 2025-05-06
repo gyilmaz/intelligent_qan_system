@@ -1,0 +1,24 @@
+# Core Libraries
+hydra-core          # Configuration management
+omegaconf           # Used by Hydra
+
+# Web Framework & UI
+fastapi             # For building the API
+uvicorn[standard]   # ASGI server for FastAPI
+streamlit           # For building the lightweight UI
+
+# Machine Learning & NLP
+transformers        # Core Hugging Face library
+torch               # Deep learning framework (PyTorch) - required by transformers and sentence-transformers.
+                    # Alternatively, you could use tensorflow, but choose only one.
+sentence-transformers # Convenient library for generating embeddings
+
+# Vector Database
+chromadb            # Lightweight vector database
+
+# Data Handling & PDF Processing
+PyMuPDF             # For extracting text from PDF files
+
+# Optional: if you need more advanced text splitting later
+langchain         # Provides sophisticated text splitters and other utilities
+google-generativeai

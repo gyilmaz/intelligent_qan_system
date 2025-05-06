@@ -1,0 +1,7 @@
+
+dataset_name: "school_handbook_pdf"
+# raw_data_path: "data/raw/2024-2025_HPS_Student_and_Parent_Handbook.pdf" # Path to your PDF file
+raw_data_path: "data/raw/handbookparttesting.pdf"
+processed_data_path: "data/processed"
+chunk_size: 500
+chunk_overlap: 50

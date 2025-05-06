@@ -1,0 +1,21 @@
+project_name: IntelligentDocument_QAN_System
+pipeline: process_data
+data:
+  dataset_name: school_handbook_pdf
+  raw_data_path: data/raw/2024-2025_HPS_Student_and_Parent_Handbook.pdf
+  processed_data_path: data/processed
+  chunk_size: 500
+  chunk_overlap: 50
+model:
+  embedding_model_name: sentence-transformers/all-MiniLM-L6-v2
+  generator_llm_name: distilbert/distilgpt2
+  vector_db_path: data/vector_db
+deployment:
+  cloud_provider: aws
+  aws_region: us-east-1
+  ecs_cluster_name: ${project_name}-cluster
+  ecs_service_name: ${project_name}-service
+  ecr_repository_name: ${project_name}-repo
+api:
+  host: 0.0.0.0
+  port: 8000

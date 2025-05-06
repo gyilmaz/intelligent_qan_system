@@ -1,0 +1,15 @@
+project_name: IntelligentDocumentQASystem
+pipeline: process_data
+data:
+  dataset_name: school_handbook_pdf
+  raw_data_path: data/raw/2024-2025_HPS_Student_and_Parent_Handbook.pdf
+  processed_data_path: data/processed
+  chunk_size: 500
+  chunk_overlap: 50
+model: {}
+deployment:
+  cloud_provider: aws
+  aws_region: us-east-1
+  ecs_cluster_name: ${project_name}-cluster
+  ecs_service_name: ${project_name}-service
+  ecr_repository_name: ${project_name}-repo

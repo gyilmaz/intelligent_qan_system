@@ -1,0 +1,4 @@
+# conf/api/default.yaml
+
+host: "0.0.0.0" # Listen on all interfaces (useful for Docker/deployment)
+port: 8000      # Default FastAPI port

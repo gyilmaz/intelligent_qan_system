@@ -1,0 +1,7 @@
+# conf/deployment/default.yaml
+cloud_provider: "aws"
+aws_region: "us-east-1" # Or your preferred region
+ecs_cluster_name: "${project_name}-cluster"
+ecs_service_name: "${project_name}-service"
+ecr_repository_name: "${project_name}-repo"
+# Add more AWS specific configs later (VPC, security groups, etc.)

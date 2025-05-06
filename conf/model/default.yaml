@@ -1,0 +1,4 @@
+# conf/model/default.yaml
+embedding_model_name: "sentence-transformers/all-MiniLM-L6-v2" # A good small, fast model
+generator_llm_name: "distilbert/distilgpt2" # A small, fast model for text generation
+vector_db_path: "data/vector_db" # Local path for ChromaDB
