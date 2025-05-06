@@ -1,2 +1,0 @@
-[2025-05-06 09:42:46,372][sentence_transformers.SentenceTransformer][INFO] - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
-[2025-05-06 09:42:48,124][chromadb.telemetry.product.posthog][INFO] - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
